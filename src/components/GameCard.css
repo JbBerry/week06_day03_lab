@@ -1,8 +1,9 @@
-.card{
+.card {
   height: 200px;
   width: 150px;
+  /* filter: grayscale(100%) */
 }
 
 .card:active{
-  transform: scale(0.2);
+  filter: grayscale(100%);
 }

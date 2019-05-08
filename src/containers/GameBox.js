@@ -76,22 +76,25 @@ class GameBox extends Component{
          }
 
       ],
-      chosenCharacter:{}
+
     }
+    this.chosenCharacter = this.getRandomCharacter()
+
   };
 
-  chooseCharacter(){
-    const number = this.state.characters.length
-    const result = Math.floor(Math.random()*(number)+1)
-    this.setState({chosenCharacter:this.state.characters[result]})
-  }
+getRandomCharacter(){
+  const arrayLength  = this.state.characters.length;
+  const randomNumber = Math.floor(Math.random()*(arrayLength));
+  return this.state.characters[randomNumber]
+}
+
   render(){
     return (
       <div className='GameBox'>
         <Title/>
         <GameCards characters = {this.state.characters}/>
-        <Questions chosenCharacter = {this.state.chosenCharacter}/>
-        <Guesses characters = {this.state.characters} chosenCharacter = {this.state.chosenCharacter}/>
+        <Questions characters = {this.state.characters} chosenCharacter = {this.chosenCharacter}/>
+        <Guesses characters = {this.state.characters} chosenCharacter = {this.chosenCharacter}/>
       </div>
     );
   }

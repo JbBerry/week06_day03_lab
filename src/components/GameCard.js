@@ -5,7 +5,7 @@ const GameCard = (props) =>{
   const imageURL = `character_images/${props.image}`;
 
   return(
-    <img class='card' src={imageURL} alt={props.name}/>
+    <img className='card' src={imageURL} alt={props.name}/>
   )
 }
 

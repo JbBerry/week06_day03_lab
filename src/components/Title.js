@@ -4,7 +4,7 @@ import './Title.css';
 const Title = (props) =>{
 
   return(
-    <img class='title' src='/character_images/Logo.png' alt='Guess Who Logo'/>
+    <img className='title' src='/character_images/Logo.png' alt='Guess Who Logo'/>
   )
 }
 
