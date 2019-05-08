@@ -1,0 +1,8 @@
+.card{
+  height: 200px;
+  width: 150px;
+}
+
+.card:active{
+  transform: scale(0.2);
+}
